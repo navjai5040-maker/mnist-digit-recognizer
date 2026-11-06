@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MNIST Digit Recognizer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Handwritten Digit Recognizer</h1>
+
+        <p>Draw a digit between 0 and 9</p>
+
+        <div class="drawing-area">
+            <canvas id="digitCanvas"
+                    width="280"
+                    height="280">
+            </canvas>
+        </div>
+
+        <div class="controls">
+            <button id="clearBtn">Clear</button>
+            <button id="predictBtn">Predict</button>
+        </div>
+
+        <p id="status"></p>
+
+        <div class="result-area">
+            <h2>Predicted Digit</h2>
+            <div id="prediction">?</div>
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
